@@ -1,5 +1,3 @@
-
-
 <?php
 include 'function.php';
 if (isset($_SESSION['role'])) {
@@ -46,7 +44,7 @@ $gejala = mysqli_query($koneksi, "SELECT * FROM gejala");
                         <a class="btn px-2 py-2 btn-primary ml-2" href="logout.php" role="button">Log Out</a>
                     </li>
                     <li>
-                    <button class="px-2 py-2 btn-danger ml-2"  role="button">PRINT PDF</button>
+                        <a class="btn px-2 py-2 btn-danger ml-2" href="cetak.php" role="button">Cetak Pdf</a>
                     </li>
                 </ul>
             </div>
@@ -57,7 +55,7 @@ $gejala = mysqli_query($koneksi, "SELECT * FROM gejala");
         <div class="container pb-5">
             <div class="row">
                 <div class="col-md-12">
-                    <h4 class="mb-4">Berikut hasil diagnosa :  </h4>
+                    <h4 class="mb-4">Berikut hasil diagnosa : </h4>
                     <?php
                     $diseases = [
                         'Scabies Pada Anak Anak' => $_SESSION['scabiesPadaAnakAnak'],
@@ -191,4 +189,4 @@ $gejala = mysqli_query($koneksi, "SELECT * FROM gejala");
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-</html>  
+</html>

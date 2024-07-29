@@ -1,5 +1,5 @@
 <?php
-$koneksi = mysqli_connect('localhost', 'root', '', 'spk_ayam');
+$koneksi = mysqli_connect('localhost', 'root', '', 'spk_scabies');
 
 if (mysqli_connect_errno()) {
     echo "Koneksi Database Gagal : " . mysqli_connect_error();
@@ -119,7 +119,8 @@ function login()
     $role = $data['role'];
 
     if ($data) {
-
+        $_SESSION['nama'] = $data['nama'];
+        $_SESSION['role'] = $role;
         if (password_verify($input_pass, $password)) {
             if ($role == "1") {
                 $_SESSION['role'] = 1;
@@ -418,5 +419,3 @@ function gejala($id_penyakit)
     return $row['id_gejala'];
     // echo "hasil". $row['id_gejala'];
 }
-
-
